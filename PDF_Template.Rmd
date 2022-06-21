@@ -1,0 +1,90 @@
+---
+#title: "New Credentials - `r params$surname`"
+#date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    number_sections: FALSE
+    highlight: tango
+    latex_engine: xelatex
+  html_document:
+    df_print: paged
+urlcolor: blue
+linkcolor: blue
+mainfont: Gill Sans MT
+header-includes:
+  \usepackage{xcolor}
+  \usepackage{geometry}
+  \usepackage{fancyhdr}
+  \usepackage{fontawesome5}
+  \pagestyle{fancy}
+  \geometry{twoside=true,bottom=3cm}
+  \fancyhead[L,R,C]{}
+  \fancyfoot[C]{
+    \centering
+      \texttt{\normalfont{Your Section—Your Department}}\\
+      \texttt{\normalfont{Company Name  555, Example Avenue  5555 City Country}}\\
+      \textcolor{Navy}{\faFacebook} \textcolor{BlueGreen}{\faTwitter} \textrm{@exampleSocialMedia}\\
+      \color{blue}{https://yourhomepage.org/}}
+  \fancyfoot[LE,RO]{\thepage}
+  \renewcommand{\footrule}{{\color{Navy}\vskip-\footruleskip\vskip-\footrulewidth \hrule width\headwidth height\footrulewidth\vskip\footruleskip}}
+  \renewcommand{\footrulewidth}{1.6pt}% default is 0pt
+
+
+params:
+  forenames: "Firstname"
+  surname: "Lastname"
+  username: 123
+  password: 456
+
+
+---
+
+
+
+![Organisation Header](C:/Users/EXAMPLE/Documents/R/Projects/Bulk_PDFs_and_Emails/assets/exampleheader.png)\
+
+Dear `r params$forenames` `r toupper(params$surname)`,
+\newline
+\newline
+\newline
+As you may be aware, THE ORGANISATION has been experiencing an access issue with RESOURCE. The issue is on the vendor side and as of the current moment, THE VENDOR has still not resolved the issue. We sincerely apologise for the inconvenience.
+
+However, we are pleased to announce that we have arranged a **temporary workaround solution**, and this we will leave in place until the issue is resolved.
+
+THE ORGANISATION has created a temporary account for you in cooperation with OTHER ENTITY. This measure will ensure your continued access.  Please note that this temporary account can only be used for THE VENDOR content, and you still need to use your normal access for other resources.
+
+
+* **Your Temp. Username is:** \fontencoding{T1}\fontfamily{pcr}\selectfont `r params$username`
+\normalfont
+* **Your Password is:** \fontencoding{T1}\fontfamily{pcr}\selectfont `r params$password`
+
+\normalfont
+Using THE SYSTEM with the above new credentials is slightly different than normal. \newline
+See the following page for instructions.
+
+
+
+
+
+
+
+
+\newpage
+# INSTRUCTIONS FOR ACCESSING THE VENDOR'S CONTENT
+
+1. **Important first step. **
+
+> - Some context.
+
+2. Go to [https://www.webaddress.net/](https://www.webaddress.net)
+
+4. Enter your provided credentials.
+
+
+**You are now logged into THE SYSTEM and able to access content.**
+
+
+
+
+---
+*If you encounter any issues,  then please let us know by contacting us at [https://yourhomepage.org/form/](https://yourhomepage.org/form/).*
